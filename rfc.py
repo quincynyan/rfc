@@ -1,4 +1,4 @@
-def rail_fence_cipher(encrypt_or_decrypt: str, input_type: str, key: int, sentence: str = None) -> str:
+def rail_fence_cipher(encrypt_or_decrypt: str, input_type: str, key: int, sentence: str = "") -> str:
     if input_type == "t":
         sentence = input("Sentence: ")
     elif input_type == "r":
@@ -28,6 +28,7 @@ def rail_fence_cipher(encrypt_or_decrypt: str, input_type: str, key: int, senten
             elif row == 0:
                 direction = 1
         return "".join(rows)
+    return ""
 
 
 encrypt_or_decrypt = input("Encrypt or decrypt ('e' or 'd') : ").lower()

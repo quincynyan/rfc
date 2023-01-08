@@ -56,6 +56,7 @@ def decrypt(sentence, key):
     constant = 2
 
     # Decrypt the first line of the Rail Fence Cipher
+    no = 0
     for y in range(1, x):
         if y == 1:
             de_list[0] = sentence[y-1]
@@ -89,7 +90,7 @@ def decrypt(sentence, key):
         constant += 2
 
     # Return the decrypted list as a string
-    return ''.join(de_list)
+    return ''.join(str(de_list))
 
 # Main function to run the Rail Fence Cipher
 
